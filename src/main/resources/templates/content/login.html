@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/default}">
+<th:block layout:fragment="content">
+    <section class="py-5 text-center container">
+        <div class="row">
+            <div class="col-lg-12 col-md-4 mx-auto">
+                <form th:action="@{/login}" method="post">
+                    <div class="mb-3 row">
+                        <label class="col-sm-1 col-form-label"> User ID :</label>
+                        <div class="col-sm-3">
+                            <input class="form-control" type="text" name="username"/>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-1 col-form-label"> Password:</label>
+                        <div class="col-sm-3">
+                            <input class="form-control" type="password" name="password"/>
+                        </div>
+                    </div>
+                    <div class="text-start">
+                        <button class="btn btn-outline-primary me-2" type="submit">Login</button>
+                        <button type="button" class="btn btn-outline-success">Sign-up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</th:block>>
+</html>

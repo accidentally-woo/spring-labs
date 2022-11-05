@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/labs?serverTimezone=Asia/Seoul
+    username: root
+    password: 1234
+#  sql:
+#    init:
+#      mode: always
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    jmx:
+      exposure:
+        include: "health,info,shutdown"
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
