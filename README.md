@@ -54,7 +54,7 @@ MockMvc를 주입하기위해  사용된 ```@AutoConfigureMockMvc```와 ```@Spri
 
 뿐만아니라, 스프링부투를 사용해 풀스택 통합테스트를 작성할 수 있게, HTTP Request cycle을 모킹한다.
 
-[참고](src/test/java/io/springbootlabs/app/web/in/HelloControllerTestIT.java)
+참고 코드 위치 : src/test/java/io/springbootlabs/app/web/in/HelloControllerTestIT.java
 
 내장서버는 ```webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT```때문에 랜덤 포트로 시작된다.
 
@@ -214,7 +214,7 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
   }
 }
 ```
-이 예제는 웹 어플리케이션과 관련있다. 하지만, ```AuthenticationManagerBuilder```는 더 넓게 쓰일 수 있다.([web security](https://spring.io/guides/topicals/spring-security-architecture/#web-security)[^WebSecurity])
+이 예제는 웹 어플리케이션과 관련있다. 하지만, ```AuthenticationManagerBuilder```는 더 넓게 쓰일 수 있다.(web security[^WebSecurity])
 
 이```AuthenticationManagerBuilder```는 ```@Autowired```이다. 이 메소드는```@Bean```으로 등록됬다.
 
@@ -552,12 +552,11 @@ public void $EXPR$() {
 
 ---
 
-## 의문 리스트
+## 부가 설명
 [^1]: conclictController conflict2()동작함.
 ```@GetMapping("!Captitalize")```있다고 빈이 등록됨... 뭥미?
 
 [^JMX]: [Java Management eXtension](https://docs.spring.io/spring-boot/docs/2.1.1.RELEASE/reference/html/production-ready-jmx.html)
-
 [^SpringBootLoaderModule]: Spring-boole-loader 모듈은 실행가능 jar와 war파일을 지원한다. [Docs](https://docs.spring.io/spring-boot/docs/current/reference/html/executable-jar.html)
 [^GroovyGrape]: Grape는 Groovy에 내장되있는 JAR 종속성 매니저이다. [Docs](http://docs.groovy-lang.org/latest/html/documentation/grape.html)
-[^WebSecurity]: 
+[^WebSecurity]: [WebSecurity](https://spring.io/guides/topicals/spring-security-architecture/#web-security)
